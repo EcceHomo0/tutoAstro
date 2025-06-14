@@ -1,12 +1,14 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
 const pageTitle = "À propos de moi";
 
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Rédactrice technique",
+  firstName: "Yann",
+  country: "France",
+  occupation: "développement web",
   hobbies: ["photographie", "observation des oiseaux", "baseball"],
 };
 
@@ -42,9 +44,7 @@ const ajout = "le tutoriel est bon mais long";
         </style>
 	</head>
 	<body>
-        <a href="/">Accueil</a>
-        <a href="/about/">À propos</a>
-        <a href="/blog/">Blog</a>
+        <Header />
         <h1>{pageTitle}</h1>
         <h2>... et de mon nouveau site Astro !</h2>
 
@@ -54,7 +54,7 @@ const ajout = "le tutoriel est bon mais long";
         <p>Voici quelques faits me concernant :</p>
         <ul>
             <li>Je m'appelle {identity.firstName}.</li>
-            <li>Je vis au {identity.country} et je travaille en tant que {identity.occupation}.</li>
+            <li>Je vis en {identity.country} et j'étudie le {identity.occupation}.</li>
             {identity.hobbies.length >= 2 &&
                 <li>Deux de mes loisirs sont : {identity.hobbies[0]} et {identity.hobbies[1]}</li>
             }
@@ -71,6 +71,11 @@ const ajout = "le tutoriel est bon mais long";
         {goal === 3 ? <p>Mon objectif est de terminer en 3 jours.</p> : <p>Mon objectif n'est pas de 3 jours.</p>}
 
         <p>J'ajouterais que {ajout}</p>
-
+        <Footer />
+        <script>
+    		import "../scripts/menu.js";
+  		</script>
+    </body>
+</html>
     </body>
 </html>

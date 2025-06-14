@@ -1,0 +1,19 @@
+---
+import Social from './Social.astro';
+const reseau_social = "linkedin";
+---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
+<footer>
+    <Social platform="twitter" username="astrodotbuild" />
+    <Social platform="github" username="withastro" />
+    <Social platform="youtube" username="astrodotbuild" />
+    <p>Retrouvez mon profil sur <a href={'https://www.linkedin.com/in/yann-tieba-63a4b8305'}>{reseau_social}</a></p>
+</footer>
